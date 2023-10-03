@@ -1,0 +1,68 @@
+@import '../../../assets/styles/variables';
+
+$shadow:
+	0 10px 10px 0 rgb(0 0 0 / 15%),
+	0 6px 6px 0 rgb(0 0 0 / 15%),
+	0 3px 3px 0 rgb(0 0 0 / 15%);
+
+.collections {
+	@apply flex flex-wrap items-center mt-16 justify-between;
+
+	> a {
+		@apply animate-fade;
+	}
+}
+
+.collection {
+	@apply relative flex items-end mb-10 h-44 transition-transform rounded-xl max-w-[300px];
+	width: 31%;
+	box-shadow: 0px 0px 105px 34px #53489477;
+
+	@include fade-bg-gradient(0deg);
+	&::before {
+		@apply rounded-layout z-2;
+	}
+
+	img {
+		@apply rounded-layout image-like-bg z-1;
+		box-shadow: $shadow;
+	}
+
+	> span {
+		@apply z-1;
+	}
+
+	.behind {
+		@apply absolute overflow-hidden z-0 transition-transform;
+
+		&.second {
+			@apply opacity-60 -top-1.5 left-2.5 right-2.5 bottom-4;
+		}
+
+		&.third {
+			@apply opacity-40 -top-3 left-5 right-5 bottom-8;
+		}
+	}
+
+	&:hover {
+		@apply translate-y-2;
+
+		.behind {
+			&.second {
+				transform: translateY(-3px);
+			}
+
+			&.third {
+				transform: translateY(-6px);
+			}
+		}
+	}
+
+	.content {
+		@apply relative z-2 text-center m-3 w-full;
+
+		.title {
+			@apply font-semibold mb-1 text-white text-shadow;
+		}
+	}
+}

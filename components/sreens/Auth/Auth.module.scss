@@ -1,0 +1,36 @@
+.wrapper {
+	@apply mt-40;
+
+	> form {
+		@apply mx-auto w-1/2 air-block bg-opacity-80 p-7 text-center;
+
+		input:-webkit-autofill,
+		input:-webkit-autofill:hover,
+		input:-webkit-autofill:focus,
+		input:-webkit-autofill:active {
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: rgb(151, 151, 160);
+			transition: background-color 5000s ease-in-out 0s;
+			box-shadow: inset 0 0 20px 20px #23232329;
+		}
+		// border: 1px solid #ffffff25;
+		box-shadow: 0 2px 1px 1px #ffffff17;
+	}
+
+	.buttons {
+		@apply mt-12 shadow-lg;
+
+		> button {
+			&:first-child {
+				@apply rounded-r-none;
+				background-color: #e41520;
+				&:hover {
+					background-color: #b9171f;
+				}
+			}
+			&:last-child {
+				@apply rounded-l-none;
+			}
+		}
+	}
+}

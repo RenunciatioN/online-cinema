@@ -1,0 +1,87 @@
+.button {
+	@apply btn-primary py-2 px-10;
+}
+
+.common {
+	@apply relative border-b border-gray-600 transition-colors focus-within:border-primary;
+
+	> label {
+		@apply block;
+
+		> span {
+			@apply text-xs uppercase text-gray-600 block;
+		}
+	}
+
+	textarea {
+		@apply bg-transparent py-2 min-h-[200px] w-full mt-4;
+		resize: none;
+
+		&::-webkit-scrollbar {
+			width: 6px; /* ширина scrollbar */
+		}
+		&::-webkit-scrollbar-track {
+			background: transparent; /* цвет дорожки */
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: rgb(88, 88, 88); /* цвет плашки */
+			border-radius: 20px; /* закругления плашки */
+			border: none; /* padding вокруг плашки */
+		}
+	}
+}
+.field {
+	@apply text-left mb-8;
+
+	input,
+	textarea {
+		@apply outline-border-none focus:ring-0 bg-transparent text-gray-500 w-full mt-5 pb-2 px-0 text-lg;
+	}
+}
+.textArea {
+	width: 100% !important;
+}
+
+.error {
+	@apply absolute -bottom-6 left-0 text-sm w-full text-primary;
+}
+
+
+.uploadField {
+	@apply relative;
+	.uploadFlex {
+		@apply flex gap-12 flex-col;
+
+		> .uploadImageContainer {
+			@apply shrink-0 relative ;
+
+			img {
+				@apply image-like-bg rounded-md h-[150px];
+			}
+
+			> span {
+				@apply animate-fade;
+			}
+		}
+
+		> label {
+			@apply block mr-6;
+
+			.error {
+				@apply relative -bottom-3;
+			}
+
+			> span {
+				@apply text-xs uppercase text-gray-600 block mb-4;
+			}
+
+			> input {
+				@apply block w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary opacity-70 file:text-white transition-opacity;
+			}
+
+			&:hover > input {
+				@apply opacity-100;
+			}
+		}
+	}
+}

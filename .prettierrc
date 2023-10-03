@@ -1,0 +1,24 @@
+{
+	"singleQuote": true,
+	"trailingComma": "es5",
+	"tabWidth": 2,
+	"useTabs": true,
+	"importOrder": [
+    "<THIRD_PARTY_MODULES>",
+		"^@/components/(.*)$",
+		"^@/screens/(.*)$",
+		"^@/UI/(.*)$",
+		"^@/hooks/(.*)$",
+		"^@/services/(.*)$",
+		"^@/store/(.*)$",
+		"^@/shared/(.*)$",
+		"^@/utils/(.*)$",
+		"^@/config/(.*)$",
+		"^@/assets/(.*)$",
+		"^../(.*)",
+		"^./(.*)",
+		"(.scss)$"
+	],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

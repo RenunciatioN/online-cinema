@@ -1,0 +1,32 @@
+.navigation {
+    @apply py-layout relative z-10 hover:bg-black-900;
+
+
+}
+
+
+.visible {
+	visibility: visible;
+	transition-delay: 0.3s;
+	opacity: 1;
+	transition-duration: 0.3s;
+}
+
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+	transition-delay: 0.1s;
+	transition-duration: 0.2s;
+}
+
+.arrow {
+	@apply absolute max-w-7xl h-7;
+
+	top: 50%;
+	right: 5px;
+	transform: translateY(-50%);
+
+	svg {
+		@apply w-full h-full;
+	}
+}

@@ -1,0 +1,45 @@
+.form {
+	@apply mt-12;
+
+	.fileds {
+		@apply flex items-baseline flex-wrap justify-between;
+
+		row-gap: 30px;
+
+		> div {
+			width: 48%;
+		}
+	}
+}
+
+.buttons {
+	@apply flex gap-10 items-center;
+
+	> button {
+		@apply mt-4 bg-gray-300 text-black-700 font-semibold;
+
+		transition: background 0.12s ease-in-out;
+
+		&:hover {
+			background: rgba(107, 216, 112, 0.74);
+		}
+	}
+	.back {
+		@apply mt-4 bg-gray-300 text-black-700 opacity-70  font-semibold cursor-pointer rounded-xl;
+
+		&:hover {
+			background: rgb(250, 33, 33);
+		}
+
+		transition: background 0.12s ease-in-out;
+
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+	}
+}
+
+.changeRulesBtn {
+	@apply uppercase mb-5 mt-2 cursor-pointer rounded-lg py-1 px-2 transition-colors border-gray-500 bg-gray-500 hover:bg-gray-300 text-xs text-gray-800;
+}

@@ -1,0 +1,16 @@
+.wrapper {
+    @apply w-9/12 mx-auto ;
+}
+
+.description {
+    @apply mt-10 mb-16 air-block p-7;
+
+    
+
+  p {
+    @apply text-lg;
+  }
+}
+.banner {
+    @apply h-[400px];
+}
